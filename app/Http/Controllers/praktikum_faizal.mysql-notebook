@@ -1,0 +1,360 @@
+{
+    "type": "MySQLNotebook",
+    "version": "1.0",
+    "caption": "DB Notebook",
+    "content": "\\about\nUSE praktikum_faizal\nSHOW TABLES\nSELECT*FROM buku\nCREATE TABLE siswa(\n    nisn INT PRIMARY KEY,\n    nama VARCHAR(30),\n    alamat VARCHAR(150),\n    no_telp INT,\n    kode_kelas VARCHAR(15)\n);\nINSERT INTO siswa\n(nisn,nama,alamat,no_telp,kode_kelas)\nVALUES\n(220809001,'SYAEFUL RAHMAN','CITALANG',085625463214,'X-RPL'),\n(220809002,'UJANG SYARIFUDIN','CISEUREUH',087965313532,'X-TKRO-1'),\n(220809003,'MAWAR','CAMPAKA',089564321326,'X-RPL'),\n(220809004,'MELATI','CIBATU',081236548923,'X-TP'),\n(220809005,'RASYAWATI','JATILUHUR',08123456913,'X-TP'),\n(220809006,'SUTRISNO','PURNAWARMAN',085136598745,'X-TKRO-2')\nSELECT detail_pengembalian.kode_buku,buku.kode_buku,siswa.nisn",
+    "options": {
+        "tabSize": 4,
+        "indentSize": 4,
+        "insertSpaces": true,
+        "defaultEOL": "LF",
+        "trimAutoWhitespace": true
+    },
+    "viewState": {
+        "cursorState": [
+            {
+                "inSelectionMode": false,
+                "selectionStart": {
+                    "lineNumber": 21,
+                    "column": 63
+                },
+                "position": {
+                    "lineNumber": 21,
+                    "column": 63
+                }
+            }
+        ],
+        "viewState": {
+            "scrollLeft": 0,
+            "firstPosition": {
+                "lineNumber": 5,
+                "column": 1
+            },
+            "firstPositionDeltaTop": 274
+        },
+        "contributionsState": {
+            "editor.contrib.folding": {},
+            "editor.contrib.wordHighlighter": false
+        }
+    },
+    "contexts": [
+        {
+            "state": {
+                "start": 1,
+                "end": 1,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 2,
+                            "content": "Welcome to the MySQL Shell - DB Notebook.\n\nPress Ctrl+Enter to execute the current statement.\n\nExecute \\sql to switch to SQL, \\js to JavaScript and \\ts to TypeScript mode.\nExecute \\help or \\? for help;",
+                            "language": "ansi"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 6
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 2,
+                "end": 2,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 4,
+                            "index": 0,
+                            "resultId": "7d37a162-d81c-44f2-8b62-cc8cdffe8f91",
+                            "content": "OK, 0 records retrieved in 1.002ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 20
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 3,
+                "end": 3,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "ed0eded3-a8b6-41bc-cd64-3238ddc90733"
+                    ]
+                },
+                "currentHeight": 36,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 11
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "e8155ddf-3614-48e7-8a58-b8072f3a8900",
+                    "resultId": "ed0eded3-a8b6-41bc-cd64-3238ddc90733",
+                    "rows": [
+                        {
+                            "0": "buku"
+                        },
+                        {
+                            "0": "detail_pengembalian"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "Tables_in_praktikum_faizal",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17
+                            }
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 2 records retrieved in 1.004ms"
+                    },
+                    "totalRowCount": 2,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SHOW TABLES"
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 4,
+                "end": 4,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "19d8da26-45e9-40a7-d4fb-8cb9bb3fc1e0"
+                    ]
+                },
+                "currentHeight": 291.984375,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 16
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "e8155ddf-3614-48e7-8a58-b8072f3a8900",
+                    "resultId": "19d8da26-45e9-40a7-d4fb-8cb9bb3fc1e0",
+                    "rows": [
+                        {
+                            "0": "B-001",
+                            "1": "ALGORITMA DAN PEMROGRAMAN",
+                            "2": "INFORMATIKA",
+                            "3": 2007
+                        },
+                        {
+                            "0": "B-002",
+                            "1": "DASAR-DASAR DESIGN",
+                            "2": "INFORMATIKA",
+                            "3": 2008
+                        },
+                        {
+                            "0": "B-003",
+                            "1": "BASIS DATA",
+                            "2": "ERLANGGA",
+                            "3": 2009
+                        },
+                        {
+                            "0": "B-004",
+                            "1": "DESIGN WEB",
+                            "2": "ERLANGGA",
+                            "3": 2007
+                        },
+                        {
+                            "0": "B-005",
+                            "1": "OOP",
+                            "2": "INFORMATIKA",
+                            "3": 2002
+                        },
+                        {
+                            "0": "B-006",
+                            "1": "MICROSOFT OFFICE EXCEL",
+                            "2": "YUDISTIRA",
+                            "3": 2002
+                        },
+                        {
+                            "0": "B-007",
+                            "1": "MICROSOFT OFFICE WORD",
+                            "2": "YUDISTIRA",
+                            "3": 2003
+                        },
+                        {
+                            "0": "B-008",
+                            "1": "STRUKTUR DATA",
+                            "2": "INFORMATIKA",
+                            "3": 2010
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "kode_buku",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17
+                            }
+                        },
+                        {
+                            "title": "judul",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17
+                            }
+                        },
+                        {
+                            "title": "penerbit",
+                            "field": "2",
+                            "dataType": {
+                                "type": 17
+                            }
+                        },
+                        {
+                            "title": "tahun_terbit",
+                            "field": "3",
+                            "dataType": {
+                                "type": 4
+                            }
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 8 records retrieved in 1.001ms"
+                    },
+                    "totalRowCount": 8,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SELECT*FROM buku"
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 5,
+                "end": 11,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 4,
+                            "index": 0,
+                            "resultId": "8c841323-b3f6-484e-ee64-6c01850ddd4c",
+                            "content": "OK, 0 records retrieved in 533.486ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 139
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 12,
+                "end": 20,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 4,
+                            "index": 0,
+                            "resultId": "9bfc1ad8-1d0c-443f-b3af-03efe09006d7",
+                            "content": "OK, 0 records retrieved in 98.8ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 412
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 21,
+                "end": 21,
+                "language": "mysql",
+                "currentHeight": 180,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 62
+                        },
+                        "contentStart": 0,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        }
+    ]
+}
