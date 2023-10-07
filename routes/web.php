@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('admin');
+    return view('home');
 });
 
 Route::get('registrasi',[MasyarakatControll::class,'registrasi']);
@@ -27,5 +27,3 @@ Route::post('login',[MasyarakatControll::class,'ceklogin']);
 
 Route::get('laporan',[MasyarakatControll::class,'laporan']);
 Route::post('laporan',[MasyarakatControll::class,'laporan']);
-
-Route::get('/');

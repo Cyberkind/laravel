@@ -8,7 +8,12 @@
 </head>
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="ppm.css">
+<style>
+  body{
+    
 
+  }
+</style>
 <body>
     {{-- awal navbar --}}
     
@@ -23,7 +28,7 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
-              <a class="nav-link" href="pengaduan">Login</a>
+              <a class="nav-link" href="pengaduan">Tanggapan</a>
               <a class="nav-link" href="#">Validasi</a>
               <a class="nav-link" href="#">Laporan</a>
              {{-- akhir navbar --}}
@@ -34,7 +39,7 @@
         </div>
       </nav>
     </div>
-   
+      
       @yield('isi')
 </body>
 </html>
