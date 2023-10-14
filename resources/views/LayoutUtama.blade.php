@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Pengaduan Masyarakat</title>
 </head>
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="ppm.css">
@@ -23,18 +23,23 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
-              <a class="nav-link" href="pengaduan">Login</a>
-              <a class="nav-link" href="#">Validasi</a>
-              <a class="nav-link" href="#">Laporan</a>
+              <a class="nav-link" href="login">Login</a>
+             
+              <a class="nav-link" href="laporan">Laporan</a>
              {{-- akhir navbar --}}
 
 
             </div>
           </div>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="text-align: right">
+            <div class="navbar-nav">
+                <a href="Logout">Logout</a>
+            </div>
+          </div>
         </div>
       </nav>
     </div>
-   
+  
       @yield('isi')
 </body>
 </html>
