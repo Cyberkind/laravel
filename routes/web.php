@@ -29,3 +29,4 @@ Route::get('laporan',[MasyarakatControll::class,'laporan']);
 Route::post('laporan',[MasyarakatControll::class,'laporan']);
 
 Route::get('Masyarakat/validasi',[MasyarakatControll::class,'validasi']);
+
