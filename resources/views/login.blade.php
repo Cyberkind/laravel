@@ -9,6 +9,7 @@
 </head>
 
 <body>
+	<h1>Login Dulu Boyy</h1>
 	<section class="vh-100" style="background-color: #508bfc;">
 		<div class="container py-5 h-100">
 		  <div class="row d-flex justify-content-center align-items-center h-100">
@@ -28,12 +29,7 @@
 					<label class="form-label" for="typePasswordX-2">Password</label>
 				  </div>
 	  
-				  <!-- Checkbox -->
-				  <div class="form-check d-flex justify-content-start mb-4">
-					<input class="form-check-input" type="checkbox" value="" id="form1Example3" />
-					<label class="form-check-label" for="form1Example3"> Remember password </label>
-				  </div>
-	  
+				  	  
 				  <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
 	  
 				  <hr class="my-4">

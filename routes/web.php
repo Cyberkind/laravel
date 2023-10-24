@@ -15,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return view('LayoutUtama');
+});
+
+Route::get('home', function () {
     return view('Masyarakat.home');
 });
 
@@ -25,8 +29,11 @@ Route::post('registrasi/simpan',[MasyarakatControll::class,'simpan']);
 Route::get('login',[MasyarakatControll::class,'login']);
 Route::post('login',[MasyarakatControll::class,'ceklogin']);
 
-Route::get('laporan',[MasyarakatControll::class,'laporan']);
-Route::post('laporan',[MasyarakatControll::class,'laporan']);
+Route::get('Masyarakat/laporan',[MasyarakatControll::class,'laporan']);
+Route::post('Masyarakat/laporan',[MasyarakatControll::class,'laporan']);
 
 Route::get('Masyarakat/validasi',[MasyarakatControll::class,'validasi']);
 
+Route::get('/',function(){
+    return view('');
+});

@@ -8,7 +8,19 @@
 </head>
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="ppm.css">
+<style>
+  .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  h1{
+    text-align: center;
 
+
+  }
+</style>
 <body>
     {{-- awal navbar --}}
     
@@ -33,13 +45,21 @@
           </div>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="text-align: right">
             <div class="navbar-nav">
-                <a href="Logout">Logout</a>
+                <a href="registrasi">Register</a>
             </div>
           </div>
         </div>
       </nav>
     </div>
-  
+    <div class="content">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Selamat Datang di halaman Pelaporan Pengaduan Masyarakat</h5>
+          <p class="card-text">anda punya masalah? itu urusan anda bukan urusan saya</p>
+          <a href="login" class="btn btn-primary">lapor</a>
+        </div>
+      </div>
+    </div>
       @yield('isi')
 </body>
 </html>

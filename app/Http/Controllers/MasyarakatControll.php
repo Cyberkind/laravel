@@ -32,11 +32,12 @@ class MasyarakatControll extends Controller
     }
     public function ceklogin(Request $request){
         $m = new Masyarakat();
+        $m = $m->where('username',$request->input('username'))->where('password',$request->input('password'));
         //cek username dan password exists (ada) di tabel masyarakat
-        if($m->where('username',$request->input('username'))->where('password',$request->input('password'))->exists()){
-            return redirect('/');
+        if($m->exists()){
+            return redirect('home');
         }
-        return back()->with('info','sadasdsad');
+        return back()->with('info','login gagal');
     }
     public function laporan(){
         return view('Masyarakat.laporan');

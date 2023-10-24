@@ -1,6 +1,6 @@
-@extends('LayoutUtama')
+@extends('Masyarakat.home')
 
-@section('isi')
+@section('jjj')
 <div id="main" class="d-flex align-items-center vh-100">
     <div class="container">
             <div class="card shadow m-auto" style="width: 400px">
