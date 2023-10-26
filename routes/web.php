@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\MasyarakatControll;
 use Illuminate\Support\Facades\Route;
 
@@ -32,8 +33,13 @@ Route::post('login',[MasyarakatControll::class,'ceklogin']);
 Route::get('Masyarakat/laporan',[MasyarakatControll::class,'laporan']);
 Route::post('Masyarakat/laporan',[MasyarakatControll::class,'laporan']);
 
+Route::get('laporan',[MasyarakatControll::class,'laporan']);
+Route::post('laporan',[MasyarakatControll::class,'laporankan']);
+
+
+
 Route::get('Masyarakat/validasi',[MasyarakatControll::class,'validasi']);
 
-Route::get('/',function(){
-    return view('');
-});
+//admin
+Route::get('adminLogin',[AdminController::class,'loginA']);
+Route::post('adminLogin',[AdminController::class,'cekloginA']);
