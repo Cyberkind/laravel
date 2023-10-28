@@ -33,7 +33,11 @@
 	  </form>
 	  
 				  <hr class="my-4">
-	  
+	  				<div>
+						<a href="registrasi">tidak punya akun?
+							buat akun     
+						</a>
+					</div>
 				  
 				</div>
 			  </div>

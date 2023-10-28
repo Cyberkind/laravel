@@ -4,23 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pengaduan Masyarakat</title>
-</head>
-<link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
 <link rel="stylesheet" href="ppm.css">
-<style>
-  .content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  h1{
-    text-align: center;
+    <title>Pengaduan Masyarakat</title>
+    <style>
+        
+    </style>
+</head>
 
-
-  }
-</style>
 <body>
     {{-- awal navbar --}}
     
@@ -34,30 +25,24 @@
           
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-              <a class="nav-link" href="login">Login</a>
+              <a class="nav-link active" aria-current="page" href="home">Home</a>
+              
              
-              <a class="nav-link" href="login">Laporan</a>
+              <a class="nav-link" href="Masyarakat/laporan">Laporan</a>
+              <a class="nav-link d-flex" href="logout">logout</a>
              {{-- akhir navbar --}}
 
 
             </div>
           </div>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="text-align: right">
-            
+          
+            </div>
           </div>
         </div>
+        
       </nav>
+      
     </div>
-    <div class="content">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Selamat Datang di halaman Pelaporan Pengaduan Masyarakat</h5>
-          <p class="card-text">anda punya masalah? itu urusan anda bukan urusan saya</p>
-          <a href="login" class="btn btn-primary">lapor</a>
-        </div>
-      </div>
-    </div>
-      @yield('isi')
+  @yield('jjj')
 </body>
 </html>
