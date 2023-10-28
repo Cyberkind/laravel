@@ -43,3 +43,10 @@ Route::get('Masyarakat/validasi',[MasyarakatControll::class,'validasi']);
 //admin
 Route::get('adminLogin',[AdminController::class,'loginA']);
 Route::post('adminLogin',[AdminController::class,'cekloginA']);
+
+Route::get('registrasiAdmin',[AdminController::class,'registrasiAdmin']);
+Route::post('registrasi/simpen',[AdminController::class,'simpen']);
+
+Route::get('homeAdmin', function () {
+    return view('Admin.homeAdmin');
+});
