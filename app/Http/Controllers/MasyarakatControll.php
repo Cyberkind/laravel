@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Masyarakat;
+use App\Models\pengaduan;
 use Illuminate\Http\Request;
 
 class MasyarakatControll extends Controller
@@ -46,37 +47,23 @@ class MasyarakatControll extends Controller
         return view('Masyarakat.laporan');
     }
 
-    public function laporankan(Request $request){
-       
-        //siapkan variable menampung file
-       
-        
-    }
     public function ceklaporan(Request $request){
 
-        $s = $request->validate([
-            'nik'=>'required|max:16',
-            'tanggal_pengaduan'=>'required|date',
-            'foto'=> 'required',
-            'isi_laporan'=> 'required'
-            
-
-        ]);
-        $b = new Pengaduan();
-        $b->create([
-            'nik'=>$request->nik,
-            'tgl_pengaduan'=>$request->tgl_pengaduan,
-            'foto'=>$request->foto,
-            'isi_laporan'=>$request->isi_laporan
-        ]);
-        return back()->width('pesan')->with('info','berhasil');
-        $foto = $request->file('foto');
-        
+        $photo = $request->file('foto');
         //tentukan path file akan disimpan
         $folder = 'upload_data';
 
         //pindahkan file ke target file
-        $foto->move($folder, $foto->getClientOriginalName());
+        $photo->move($folder, $photo->getClientOriginalName());
+        $b = new pengaduan();
+        $b->create([
+            'nik'=>$request->nik,
+            'tgl_pengaduan'=>date('Y-m-d'),
+            'photo'=>$photo->getClientOriginalName(),
+            'isi_laporan'=>$request->isi_laporan
+        ]);
+        
+        return back();
     }
     
 }

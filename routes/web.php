@@ -34,7 +34,7 @@ Route::get('Masyarakat/laporan',[MasyarakatControll::class,'laporan']);
 Route::post('Masyarakat/laporan',[MasyarakatControll::class,'laporan']);
 
 Route::get('laporan',[MasyarakatControll::class,'laporan']);
-Route::post('laporan',[MasyarakatControll::class,'laporankan']);
+Route::post('laporan',[MasyarakatControll::class,'ceklaporan']);
 
 
 
