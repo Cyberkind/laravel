@@ -28,8 +28,10 @@
               <a class="nav-link active" aria-current="page" href="home">Home</a>
               
              
-              <a class="nav-link" href="Masyarakat/laporan">Laporan</a>
-              <a class="nav-link d-flex" href="logout">logout</a>
+              <a class="nav-link" href="Admin/tanggapan">Tanggapan</a>
+              <a class="nav-link" href="Admin/validasi">Laporan</a>
+              <a class="nav-link" href="Admin/validasi">validasi</a>
+              <a class="nav-link d-flex" href="{{url('logout')}}">logout</a>
              {{-- akhir navbar --}}
 
 

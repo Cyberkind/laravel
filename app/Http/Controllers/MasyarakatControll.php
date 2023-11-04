@@ -36,6 +36,8 @@ class MasyarakatControll extends Controller
         $m = $m->where('username',$request->input('username'))->where('password',$request->input('password'));
         //cek username dan password exists (ada) di tabel masyarakat
         if($m->exists()){
+$j=$m->first();
+            session(['aran'=>$j]);
             return redirect('home');
         }
         return back()->with('info','login gagal');
@@ -63,6 +65,11 @@ class MasyarakatControll extends Controller
             'isi_laporan'=>$request->isi_laporan
         ]);
         
+        return back();
+    }
+
+    public function logout(){
+        session()->flush();
         return back();
     }
     

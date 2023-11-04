@@ -12,14 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('pengaduan',function(Blueprint $tabel){
-            $tabel->integer('id_pengaduan');
+            $tabel->integer('id_pengaduan')->autoIncrement();
             $tabel->date('tgl_pengaduan');
             $tabel->char('nik',16);
             $tabel->text('isi_laporan');
             $tabel->string('photo',225);
             $tabel->enum('Status',['proses','selesai','0']);
             $tabel->timestamps();
-            $tabel->primary('id_pengaduan');
+         
         });
     }
 

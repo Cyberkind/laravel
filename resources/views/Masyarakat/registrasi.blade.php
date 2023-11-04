@@ -77,6 +77,9 @@
                             
                         </div>
                     </form>
+                    <div>
+                        <a href="login">back to login</a>
+                    </div>
                 </div>
             </div>
         </div>

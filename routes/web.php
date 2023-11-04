@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\MasyarakatControll;
+use App\Http\Middleware\AdminMidd;
+use App\Http\Middleware\MasyarakatMidd;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,24 +31,27 @@ Route::post('registrasi/simpan',[MasyarakatControll::class,'simpan']);
 
 Route::get('login',[MasyarakatControll::class,'login']);
 Route::post('login',[MasyarakatControll::class,'ceklogin']);
+Route::get('logout',[MasyarakatControll::class,'logout']);
 
-Route::get('Masyarakat/laporan',[MasyarakatControll::class,'laporan']);
-Route::post('Masyarakat/laporan',[MasyarakatControll::class,'laporan']);
 
-Route::get('laporan',[MasyarakatControll::class,'laporan']);
+
+Route::get('laporan',[MasyarakatControll::class,'laporan'])->middleware(MasyarakatMidd::class);
 Route::post('laporan',[MasyarakatControll::class,'ceklaporan']);
 
 
 
-Route::get('Masyarakat/validasi',[MasyarakatControll::class,'validasi']);
+Route::get('validasi',[AdminController::class,'validasi'])->middleware(AdminMidd::class);
 
 //admin
 Route::get('adminLogin',[AdminController::class,'loginA']);
 Route::post('adminLogin',[AdminController::class,'cekloginA']);
 
 Route::get('registrasiAdmin',[AdminController::class,'registrasiAdmin']);
-Route::post('registrasi/simpen',[AdminController::class,'simpen']);
+Route::post('registrasiAdmin',[AdminController::class,'simpen']);
+Route::post('logout',[AdminController::class,'logout']);
 
 Route::get('homeAdmin', function () {
     return view('Admin.homeAdmin');
 });
+
+Route::get('admin',[AdminController::class,'admin']);

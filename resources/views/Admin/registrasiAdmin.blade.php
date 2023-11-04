@@ -78,9 +78,10 @@ button[type="submit"]:hover {
         
         <div class="container">
             <h1>Daftar </h1>
-            <form>
-                <label for="id_petugas">ID Petugas:</label>
-                <input type="number" id="id_petugas" name="id_petugas" required>
+            <form action="{{url('registrasiAdmin')}}" method="POST">
+				@csrf
+                {{-- <label for="id_petugas">ID Petugas:</label>
+                <input type="number" id="id_petugas" name="id_petugas" required> --}}
                 <label for="nama_petugas">Nama Petugas</label>
                 <input type="text" id="nama_petugas" name="nama_petugas" required>
                 <label for="username">Username:</label>
@@ -90,7 +91,7 @@ button[type="submit"]:hover {
                 <label for="tlp">No.Telpon:</label>
                 <input type="number" id="tlp" name="tlp" required>
                 <label for="level">Jabatan</label>
-                <select name="level" id="">
+                <select name="Level" id="">
                     <option value="petugas">Petugas</option>
                     <option value="admin">Admin</option>
                 </select>

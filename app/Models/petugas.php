@@ -8,8 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class petugas extends Model
 {
     use HasFactory;
-    protected $tabel ="pengaduan";
-    protected $primaryKey ="id_pengaduan";
+    protected $tabel ="petugas";
+    protected $primaryKey ="id_petugas";
     public $incrementing = false;
     protected $guarded = [];
 }

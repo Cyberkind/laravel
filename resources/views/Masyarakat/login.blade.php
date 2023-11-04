@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="css/bootstrap.css">
 <body>
 	
-  <section class="vh-100" style="background-color: #f7ebff;">
+  <section class="vh-100" style="background-color: #574861;">
 		<div class="container py-5 h-100">
 		  <div class="row d-flex justify-content-center align-items-center h-100">
 			<div class="col-12 col-md-8 col-lg-6 col-xl-5">
